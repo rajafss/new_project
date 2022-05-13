@@ -49,6 +49,9 @@ import 'dart:async';
         new Center(
          child:  new Text('${textData[0]['title']}'),
         ),
+        new Center(
+         child:  new Text('${textData}'),
+        ),
 
        ],
       ),

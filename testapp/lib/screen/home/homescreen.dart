@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:testapp/screen/food.dart';
 
 class HomeScreen extends StatelessWidget{
   @override
@@ -38,27 +39,39 @@ class HomeScreen extends StatelessWidget{
             new Padding(padding: EdgeInsets.all(10.0)),
             Row(
                children: [
-                 Expanded(child: Container(
+                 Expanded(
+                   child: Container(
                    decoration: BoxDecoration(
                        borderRadius: BorderRadius.all(
                          Radius.circular(30),
                        ),
                        color: Colors.green
                    ),
-                   child: new Text('All',style: TextStyle(color: Colors.white,fontSize: 16),textAlign: TextAlign.center,),
-                   padding: EdgeInsets.all(12.0),
-                 ),) ,
+                   child: FlatButton (onPressed: (){
+                     Navigator.push(context, MaterialPageRoute(builder: (context)=>  FoodList()),);
+                   },child: new Text('All',style: TextStyle(color: Colors.white,fontSize: 16),textAlign: TextAlign.center,),
+                     padding: EdgeInsets.all(12.0),
+                   ),
+
+
+
+                 ),
+                 ) ,
                  new Padding(padding: EdgeInsets.all(12.0)),
-                 Expanded(child: Container(
+                 Expanded(
+                   child: Container(
                    decoration: BoxDecoration(
                        borderRadius: BorderRadius.all(
                          Radius.circular(30),
                        ),
                        color: Colors.blueGrey.shade50
                    ),
-                   child: new Text('Food',style: TextStyle(color: Colors.black12,fontSize: 16),textAlign: TextAlign.center,),
+                   child: FlatButton (onPressed: (){},
+                     child: new Text('Food',style: TextStyle(color: Colors.black12,fontSize: 16),textAlign: TextAlign.center,),
                    padding: EdgeInsets.all(12.0),
-                 ),) ,
+                 ),
+                   )
+                 ) ,
                  new Padding(padding: EdgeInsets.all(12.0)),
                  Expanded(child: Container(
                    decoration: BoxDecoration(
@@ -67,9 +80,11 @@ class HomeScreen extends StatelessWidget{
                        ),
                        color: Colors.blueGrey.shade50
                    ),
-                   child: new Text('Drink',style: TextStyle(color: Colors.black12,fontSize: 16),textAlign: TextAlign.center,),
+                   child: FlatButton (onPressed: (){},child:new Text('Drink',style: TextStyle(color: Colors.black12,fontSize: 16),textAlign: TextAlign.center,),
                    padding: EdgeInsets.all(12.0),
-                 ),) ,
+                 ),
+                 )
+                 ),
                ]
             ) ,
             new Padding(padding: EdgeInsets.all(8.0)),
