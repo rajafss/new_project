@@ -6,23 +6,23 @@ class Screen extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: new Column(
+      body: Column(
         children: [
-          new Expanded(child: new Image(image: AssetImage('assets/food.jpeg'),
+          Expanded(child: Image(image: AssetImage('assets/food.jpeg'),
             fit: BoxFit.fill,),),
           Padding(padding: EdgeInsets.all(20.0)),
-          new Center(
-            child:new Column(
+          Center(
+            child:Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                new Text('Start cooking',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20.0,),),
-                new Text('Let s join our communuty' ,style: TextStyle(color: Colors.grey),),
-                new Text('to cook better food !',style: TextStyle(color: Colors.grey),),
+                Text('Start cooking',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20.0,),),
+                Text('Let s join our communuty' ,style: TextStyle(color: Colors.grey),),
+                Text('to cook better food !',style: TextStyle(color: Colors.grey),),
 
               ],
             ),
           ),
-          new Padding(padding: EdgeInsets.all(20.0)),
+          Padding(padding: EdgeInsets.all(20.0)),
           // onPressed ==> navigation between screens
           FlatButton(onPressed: (){
             Navigator.push(context, MaterialPageRoute(builder: (context)=>  HomeScreen()),);
@@ -36,7 +36,7 @@ class Screen extends StatelessWidget{
                 ),
                 color: Colors.green
             ),
-            child: new Text('Get Started',
+            child: Text('Get Started',
               style: TextStyle(
                   color: Colors.white,
                   fontSize: 20.0),
